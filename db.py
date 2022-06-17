@@ -9,7 +9,13 @@ db = psycopg2.connect(
     port=5432
 )
 
-print(db)
 
+#cursor and table creation
+mycursor = db.cursor()
+
+#mycursor.execute("CREATE TABLE managers(Manager varchar(30), EmpId integer)")
+
+#mycursor.execute("SHOW")
+mycursor.execute("SELECT * FROM managers")
 #connection close
 db.close()
