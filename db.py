@@ -21,7 +21,7 @@ def execute_values(df, table):
     cursor = conn.cursor()
     try:
         extras.execute_values(cursor, query, tuples)
-        conn.commit()
+       # conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
         print("Error: %s" % error)
         conn.rollback()
