@@ -1,5 +1,5 @@
 import pandas as pd
-from db import execute_values
+from db import execute_values, logger
 
 
 def main():
@@ -17,6 +17,7 @@ def main():
     df_emp_transpose = pd.DataFrame({'Manager': manager, 'EmpId': empid})
     df_emp_transpose["Manager"]= df_emp_transpose["Manager"].str.upper().str.title()
     print(df_emp_transpose)
+    logger.info("Manager names where converted to camcel case")
     execute_values(df_emp_transpose, "managers")
 
 
