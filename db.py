@@ -37,7 +37,7 @@ def execute_values(df,table):
         conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
         print("Error: %s" % error)
-        logger.exception(e)
+        logger.exception(error)
         conn.rollback()
         cursor.close()
         return 1

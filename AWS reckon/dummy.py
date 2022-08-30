@@ -39,8 +39,8 @@ import csv
 if __name__ == "__main__":
 
     bucket='MyBucketName'
-    sourceFile='Mamata_gc.png'
-    targetFile='Mamata.png'
+    sourceFile='recent_pic.jpg'
+    targetFile='friend.jpg'
 
 
     with open('credentials.csv', 'r') as input:
@@ -65,3 +65,4 @@ if __name__ == "__main__":
                str(position['Left']) + ' ' +
                str(position['Top']) +
                ' matches with ' + confidence + '% confidence')
+
